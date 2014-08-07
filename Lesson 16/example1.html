@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body ng-app="myapp">
+
+	<div ng-controller="mycontroller">
+		The word of the day is: {{myWord}}
+
+	</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp', []);
+
+		app.controller('mycontroller', ['$scope', function($scope) {
+		  $scope.myWord = 'serendipity';
+		}]);
+
+	</script>
+</body>
+</html>

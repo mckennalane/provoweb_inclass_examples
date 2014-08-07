@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		body{
+			background-color: red;
+		}
+	</style>
+</head>
+<body >
+
+	<button onclick="changeColor()">Change Color</button>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+
+
+		var color = 'red';
+		
+
+		function changeColor(){
+
+			if(color == 'red'){
+				color = 'blue';
+			}
+			else if(color == 'blue'){
+				color = 'green';
+			}
+			else if(color == 'green'){
+				color = 'red';
+			}
+
+			$('body').css('background-color', color);
+
+		}
+		
+
+	</script>
+</body>
+</html>

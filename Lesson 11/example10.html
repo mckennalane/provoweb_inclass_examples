@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			width: 150px;
+			height: 150px;
+			background-color: blue;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="change()">
+		Change Button 
+	</button>
+	<div >
+		First Box
+
+	</div>
+	<br>
+	<div >
+		Second Box 
+
+	</div>
+	<br>
+	<div >
+		Third Box 
+
+	</div>
+	<br>
+	<div >
+		Fourth Box 
+
+	</div>
+
+
+	<script type="text/javascript">
+		function change(){
+			var listEls = document.getElementsByTagName('div');
+			console.log(listEls);	
+
+			for(var i = 0; i < listEls.length ; i++ ){
+				listEls[i].style.backgroundColor = 'green';
+			}
+			
+
+		}
+	</script>
+
+</body>
+</html>

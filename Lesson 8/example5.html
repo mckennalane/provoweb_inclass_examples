@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<style>
+		.class-blue{
+			background-color: blue;
+		}
+
+		.class-red{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>	
+	
+	<button onclick="myFunction()">Change</button>
+	<h1 class="class-blue"> This is a header</h1>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var color = 'blue';
+
+		function myFunction(){
+			if(color == 'blue'){
+				color = 'red';
+			}
+			else if(color == 'red'){
+				color = 'blue';
+			}
+
+			$('h1').css('background-color', color);
+			
+		}
+	</script>
+
+</body>
+</html>

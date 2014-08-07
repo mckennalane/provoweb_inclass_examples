@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="myid">Message not set yet</div>
+	<button onclick="sayHello()">Say Hello</button>
+	<button onclick="sayGoodBye()">Say Goodbye</button>
+	<script type="text/javascript">
+		console.log(document);
+
+		function sayHello(){
+			var element = document.getElementById('myid');
+			element.innerHTML = 'Hello';
+			element.style.color = 'green';
+		}
+		function sayGoodBye(){
+			var element = document.getElementById('myid');
+			element.innerHTML = 'Goodbye';
+			element.style.color = 'red';
+			
+		}
+
+	</script>
+</body>
+</html>

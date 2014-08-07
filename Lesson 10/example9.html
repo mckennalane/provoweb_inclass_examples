@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#click-div{
+			background-color: green;
+			height: 300px;
+			width: 300px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="click-div" > You can click this div to change the paragraph below</div>
+	<p id="changeme">This paragraph will change</p>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$('#click-div').hover(function(){
+				$('#changeme').html('Changing the paragraph').css('color', 'blue');
+			}, function(){
+				$('#changeme').html('This paragraph will change').css('color', 'black');
+			}
+		);
+
+		// function change(){
+				
+		// }
+
+	</script>
+</body>
+</html>

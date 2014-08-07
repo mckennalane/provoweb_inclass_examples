@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.ng-cloak{
+			display: none;
+		}
+	</style>
+</head>
+<body ng-app="myapp" ng-cloak class="ng-cloak">
+
+	<div ng-controller="mycontroller">
+		<span ng-click="">The word of the day is: {{myWord}}</span>
+ 
+	</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp', []);
+
+		app.controller('mycontroller', ['$scope', function($scope) {
+		  $scope.myWord = 'serendipity';
+		}]);
+
+	</script>
+</body>
+</html>

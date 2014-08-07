@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box{
+			position: absolute;
+			width: 300px;
+			height: 300px;
+			background-color: green;
+			top: 0px;
+			left: 0px;
+		}
+		.container{
+			width: 100%;
+			height: 1200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" onclick="stuff()" >
+		<div class="box" ></div>
+	</div>
+	<script type="text/javascript">
+		
+		function stuff(){
+			var e = window.event;
+			
+			var boxElement = document.getElementsByClassName('box')[0];
+			var width = boxElement.offsetWidth;
+			var height = boxElement.offsetHeight;
+
+			console.log(width);
+			boxElement.style.left = (e.x - width/2) + 'px';
+			boxElement.style.top = (e.y - height/2) + 'px';
+		}
+
+		function pressedKey(){
+			var key = String.fromCharCode(window.event.which);
+
+			var boxElement = document.getElementsByClassName('box')[0];
+			var xcoord = parseInt(boxElement.style.left.replace('px',''));
+			var ycoord = parseInt(boxElement.style.top.replace('px', ''));
+
+			if(isNaN(xcoord) || isNaN(ycoord) ){
+				xcoord = 0;
+				ycoord = 0;
+			}
+
+			console.log(xcoord);
+			if(key == 'w'){
+				ycoord = ycoord - 20;
+			}
+			else if(key == 's'){
+				ycoord = ycoord + 20;
+			}
+			else if(key == 'a'){
+				xcoord = xcoord - 20;
+			}
+			else if(key == 'd'){
+				xcoord = xcoord + 20;
+			}
+
+			boxElement.style.left = xcoord + 'px';
+			boxElement.style.top = ycoord + 'px';
+			
+		}
+
+		window.onkeypress = pressedKey;
+	</script>
+</body>
+</html>

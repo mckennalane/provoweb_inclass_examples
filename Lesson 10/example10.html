@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#hover-over{
+			width: 300px;
+			height: 300px;
+			background-color: blue;
+		}
+
+		#popup{
+
+			width: 300px;
+			height: 300px;
+			background-color: green;
+		}
+	</style>
+
+</head>
+<body>
+	
+
+	<div id="hover-over"></div>
+	<div id="popup"></div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$('#popup').hide();
+		$('#hover-over').hover(function(){
+				$('#popup').show();
+			}, function(){
+				$('#popup').hide();
+			}
+		);
+
+		// function change(){
+				
+		// }
+
+	</script>
+</body>
+</html>

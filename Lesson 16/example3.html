@@ -1,0 +1,44 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.ng-cloak{
+			display: none;
+		}
+
+		.size{
+			width: 300px;
+			height: 300px;
+			
+		}
+
+		.box-blue{
+			background-color: #B4CDCD;
+		}
+		
+
+	</style>
+</head>
+<body ng-app="myapp" ng-cloak class="ng-cloak">
+
+	<div class=" size box-blue" ng-controller="mycontroller">
+		<button ng-click="raise()"> Click Me </button> : {{count}}
+ 
+	</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp', []);
+
+		app.controller('mycontroller', ['$scope', function($scope) {
+		  $scope.count = 0;
+		  $scope.raise = function(){
+		  	$scope.count= $scope.count + 1 ;
+		  }
+		}]);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<style>
+		.class-blue{
+			background-color: blue;
+		}
+
+		.class-red{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>	
+	
+	<button onclick="myFunction()">Change</button>
+	<h1 class="class-blue"> This is a header</h1>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function myFunction(){
+
+			$('h1').removeClass('class-blue').addClass('class-red');
+		}
+	</script>
+
+</body>
+</html>

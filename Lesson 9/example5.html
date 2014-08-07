@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<style>
+		</style>
+	</head>
+
+	<body>
+	 
+	 <div id="add-stuff-here">
+	 	Stuff 
+	 </div>
+
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	 <script>
+	 	var personA = {
+	 		id: 123,
+	 		name: 'Scott' ,
+	 		size: 100,
+	 		morestuff: 'Hello'
+	 	};
+
+
+	 	var personB={
+	 		id: 456,
+	 		name: 'Matt'
+	 	};
+
+	 	var personC={
+	 		id: 007,
+	 		name: 'James Bond',
+	 		status: 'Top Secret'
+	 	}
+
+	 	var myArray = [personA, personB, personC];
+
+	 	for(var count = 0; count< myArray.length; count++){
+	 		$('#add-stuff-here').append(' '+myArray[count].name);
+	 	}
+	
+	 		
+	 	
+	 </script>
+	</body>
+
+
+
+</html>

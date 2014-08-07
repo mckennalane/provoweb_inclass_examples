@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.ng-cloak{
+			display: none;
+		}
+
+		.size{
+			width: 300px;
+			height: 300px;
+			
+		}
+
+		.box-blue{
+			background-color: #B4CDCD;
+		}
+
+		.box-red{
+			background-color: #F80000 ;
+		}
+		
+
+	</style>
+</head>
+<body ng-app="myapp" ng-clock class="ng-cloak">
+
+	<div ng-controller="mycontroller">
+		<div 
+			class=" size box-blue " 
+			ng-mouseenter="enterBox()" 
+			ng-mouseleave="leaveBox()">
+				{{message}}
+		</div>
+		
+		<div class=" size box-red "></div>
+
+ 
+	</div>
+	
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp', []);
+
+		app.controller('mycontroller', ['$scope', function($scope) {
+			$scope.message = 'hello';
+			$scope.enterBox = function(){
+				$scope.message = 'You entered the box';
+			}
+			$scope.leaveBox = function(){
+				$scope.message = 'You left the box';
+			}
+		}]);
+
+	</script>
+</body>
+</html>

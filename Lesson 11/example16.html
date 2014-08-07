@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box{
+			position: relative;
+			width: 300px;
+			height: 300px;
+			background-color: green;
+			top: 0px;
+			left: 0px;
+		}
+		.container{
+			width: 100%;
+			height: 1200px;
+		}
+	</style>
+</head>
+<body >
+	<div class= "container" onclick="stuff()" onkeypress="pressedKey()">
+		<div class="box" ></div>
+	</div>
+	<script type="text/javascript">
+		
+		function stuff(){
+			var e = window.event;
+			// alert("The x coordinate you clicked on is: " + e.x);
+			var boxElement = document.getElementsByClassName('box')[0];
+			
+			boxElement.style.left = e.x + 'px';
+			boxElement.style.top = e.y + 'px';
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.font-red{
+			color: red;
+		}
+
+		.font-blue{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+
+	Input: <input id="myinput"></input>
+	<button onclick="add()"></button>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var color = 'red';
+		function add(){
+
+			if(color == 'red'){
+				$('body').append('<p class="font-red">' + $('#myid').val + '</p>'  );
+				color = 'blue'
+			}
+			else if(color == 'blue'){
+				$('body').append('<p class="font-blue">' + $('#myid').val + '</p>'  );
+				color = 'red'
+			}
+
+
+
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="myid">Message not set yet</div>
+	<button onclick="sayHello()">Say Hello</button>
+	<button onclick="sayGoodBye()">Say Goodbye</button>
+	<script type="text/javascript">
+		console.log(document);
+
+		function sayHello(){
+			document.getElementById('myid').innerHTML = 'Hello';
+		}
+		function sayGoodBye(){
+			document.getElementById('myid').innerHTML = 'Goodbye';
+		}
+
+	</script>
+</body>
+</html>
