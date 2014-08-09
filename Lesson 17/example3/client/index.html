@@ -4,17 +4,17 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
-<body ng-app="myapp" ng-cloak class="ng-cloak">
+<body ng-app="myApp" ng-cloak class="ng-cloak">
 	
-	<div ng-controller="mycontroller">
+	<div ng-controller="myController">
 		<table>
 			<tr>
 				<th>Name</th>
 				<th>Hobby</th>
 			</tr>
 			<tr ng-repeat="person in people">
-				<td>{{people.name}}</td>
-				<td>{{people.hobby}}</td>
+				<td>{{person.name}}</td>
+				<td>{{person.hobby}}</td>
 			</tr>
 
 		</table>
@@ -23,6 +23,21 @@
 	
 
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
-	<script src="scripts/myscript.js"></script>
+	<script type="text/javascript">
+	
+		var app = angular.module('myApp', []);
+
+		app.controller('myController', ['$scope','$http', function($scope,$http) {
+			$http({method: 'GET', url: '/people.json'}).
+			    success(function(data, status, headers, config) {
+			      	$scope.people = data;
+
+			    }).
+			    error(function(data, status, headers, config) {
+			      	alert('Error getting stuff');
+			    });
+		}]);
+
+	</script>
 </body>
 </html>
