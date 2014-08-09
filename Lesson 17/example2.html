@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.ng-cloak{
+			display: none;
+		}
+
+
+		table{
+			width: 600px;
+			height: 600px;
+		}
+	</style>
+</head>
+<body ng-app="magicapp" ng-cloak class="ng-cloak">
+
+	<div ng-controller="magiccontroller">
+		<table border = "1">
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					Hobby
+				</th>
+
+			</tr>
+			<tr ng-repeat="person in people">
+				<td>
+					{{person.name}}
+				</td>
+				<td>
+					{{person.hobby}}
+				</td>
+			</tr>
+		</table>
+		
+
+
+	</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('magicapp', []);
+
+		app.controller('magiccontroller', ['$scope', function($scope) {
+		  $scope.people = [
+			  	{
+			  		name: 'Scott',
+			  		hobby: 'spelunking'
+			  	},
+			  	
+			  	{
+			  		name: 'Matt',
+			  		hobby: 'ping-pong'
+			  	},
+
+			  	{
+			  		name: 'Christina',
+			  		hobby: 'saving the world'
+			  	},
+
+			  	{
+			  		name: 'Steven',
+			  		hobby: 'collecting turtles'
+			  	}
+
+		  	];
+		}]);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.ng-cloak{
+			display: none;
+		}
+	</style>
+</head>
+<body ng-app="magicapp" ng-cloak class="ng-cloak">
+
+	<div ng-controller="magiccontroller">
+		<h3>{{listName}}</h3>
+		<ol>
+			<li ng-repeat="person in people">{{person}} </li>
+		</ol>
+
+
+	</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('magicapp', []);
+
+		app.controller('magiccontroller', ['$scope', function($scope) {
+		  $scope.listName = 'People';
+		  $scope.people = ['Scott', 'Steven', 'Matt', 'Jared', 'Christina', 'Robert '];
+		}]);
+
+	</script>
+</body>
+</html>
